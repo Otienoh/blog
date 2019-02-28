@@ -4,8 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "6bdd8481df8f51d39ca2f628007d150f",
     "packages": [
+        {
+            "name": "cnvs/canvas",
+            "version": "v4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cnvs/canvas.git",
+                "reference": "2cb6867c82ddd1ce914563022d4ef2c2379de399"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cnvs/canvas/zipball/2cb6867c82ddd1ce914563022d4ef2c2379de399",
+                "reference": "2cb6867c82ddd1ce914563022d4ef2c2379de399",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.7",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "~3.7.0",
+                "phpunit/phpunit": "^7.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Canvas\\CanvasServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Canvas\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Todd Austin",
+                    "email": "austin.todd.j@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel publishing platform",
+            "homepage": "https://cnvs.io",
+            "keywords": [
+                "canvas",
+                "cnvs",
+                "laravel",
+                "publishing"
+            ],
+            "time": "2019-02-11T12:47:46+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
