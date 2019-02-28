@@ -13,7 +13,7 @@
 
 Route::get('/', 'BlogController@index')->name('blog.index');
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 Route::prefix('blog')->group(function () {
     Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('/{slug}', 'BlogController@post')->name('blog.post');
