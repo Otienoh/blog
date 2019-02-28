@@ -71,7 +71,7 @@
                     <h5>
                         @foreach($data['post']->tags as $tag)
                             <span><a href="{{ route('blog.tag', $tag->slug) }}"
-                                   class="badge badge-light p-2">{{ $tag->name }}</a></span>
+                                     class="badge badge-light p-2">{{ $tag->name }}</a></span>
                         @endforeach
                     </h5>
                 @endif
@@ -94,16 +94,16 @@
                 </div>
             @endif
             @if($data['random'])
-                    <div class="col-lg bg-light text-center px-lg-5 py-5"
-                         @if(!empty($data['random']->featured_image)) style="background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url({{ $data['random']->featured_image }}); background-size: cover" @endif>
+                <div class="col-lg bg-light text-center px-lg-5 py-5"
+                     @if(!empty($data['random']->featured_image)) style="background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url({{ $data['random']->featured_image }}); background-size: cover" @endif>
+                    <a href="{{ route('blog.post', $data['random']->slug) }}"
+                       class="btn btn-sm @if(!empty($data['random']->featured_image)) btn-outline-light @else btn-outline-secondary @endif text-uppercase font-weight-bold mt-3">You
+                        might enjoy</a>
+                    <h2 class="font-weight-bold serif my-3 @if(!empty($data['random']->featured_image)) text-white @endif">
                         <a href="{{ route('blog.post', $data['random']->slug) }}"
-                           class="btn btn-sm @if(!empty($data['random']->featured_image)) btn-outline-light @else btn-outline-secondary @endif text-uppercase font-weight-bold mt-3">You
-                            might enjoy</a>
-                        <h2 class="font-weight-bold serif my-3 @if(!empty($data['random']->featured_image)) text-white @endif">
-                            <a href="{{ route('blog.post', $data['random']->slug) }}"
-                               class="title">{{ $data['random']->title }}</a></h2>
-                        <p class="serif body @if(!empty($data['random']->featured_image)) text-white-50 @else text-muted @endif">{{ str_limit(strip_tags($data['random']->body), 140) }}</p>
-                    </div>
+                           class="title">{{ $data['random']->title }}</a></h2>
+                    <p class="serif body @if(!empty($data['random']->featured_image)) text-white-50 @else text-muted @endif">{{ str_limit(strip_tags($data['random']->body), 140) }}</p>
+                </div>
             @endif
         </div>
     </div>
